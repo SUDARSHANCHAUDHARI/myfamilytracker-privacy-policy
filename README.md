@@ -8,209 +8,257 @@ This Privacy Policy applies to the mobile application **MyFamilyTracker**, publi
 **Company email:** sudarshantechlabs@gmail.com  
 **Developer contact:** sunny.sudarshan@gmail.com
 
-MyFamilyTracker (“we,” “our,” or “us”) is a family location tracking and sharing application for Android devices. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using MyFamilyTracker, you agree to the practices described below.
+MyFamilyTracker ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
 
 ## Information We Collect
 
 ### Location Data
-
-- **Real-time location:**  
-  Your device’s location is collected to share with members of your family group. This includes latitude, longitude, timestamp, and accuracy information.
-
-- **Location storage:**  
-  Location data is stored temporarily in **Firebase Realtime Database** to enable real-time location sharing.
-
-- **Location accuracy:**  
-  Accuracy data is used to display reliability indicators and improve location sharing quality.
+- **Real-time Location**: We collect your device's location data (latitude, longitude) to share with family members in your family group
+- **Location History**: 
+  - **Pro Users**: Location history is stored in Firebase Realtime Database (cloud storage, last 100 entries per user)
+  - **Free Users**: Location history is stored locally on your device using Room database (30 days retention, automatically cleaned up)
+- **Location Accuracy**: We collect location accuracy information (in meters) to provide better location services
+- **Location Timestamps**: We record when location updates occur
+- **Geofences**: If you create geofences, we store their locations, names, types, and radii
 
 ### Account Information
-
-- **User profile:**  
-  Name, email address, and phone number (if provided during account creation or profile editing).
-
-- **Authentication:**  
-  User ID provided by **Firebase Authentication** (Google Sign-In or Anonymous Sign-In).
-
-- **Family group data:**  
-  Family group membership, invite codes, and participation details.
+- **User Profile**: Name, email, phone number (if provided)
+- **Authentication**: User ID from Firebase Authentication (Google Sign-In or Anonymous)
+- **Family Group**: Family group membership and invite codes
+- **Privacy Settings**: Your privacy preferences including:
+  - Invisible mode status
+  - Location fuzzing preferences
+  - Members to hide the location from
+  - Time-based sharing schedules
 
 ### Device Information
+- **Device ID**: Unique device identifier for location tracking
+- **FCM Token**: Firebase Cloud Messaging token for push notifications
+- **Battery Level**: Device battery level (optional, for status display)
+- **Network Status**: Online/offline status
 
-- **Device identifier:**  
-  A unique device identifier used for app functionality and location updates.
-
-- **App usage:**  
-  Basic usage data related to family group membership and location-sharing preferences.
+### Analytics and Crash Data
+- **App Usage Analytics**: We use Firebase Analytics to understand how you use the app
+  - Events tracked: Sign-in, location sharing toggles, geofence creation, emergency alerts
+  - No personally identifiable information is collected in analytics
+- **Crash Reports**: We use Firebase Crashlytics to identify and fix app crashes
+  - Crash reports include device information, app version, and error details
+  - No personal information is included in crash reports
 
 ## How We Use Your Information
 
 ### Location Sharing
-
-- Share your real-time location with members of your family group
-- Display your location on a map
-- Enable features such as **Jump to Location** and **Show All Members**
-- Provide location-based functionality
+- Share your real-time location with family members in your family group
+- Display your location on a map for family members to view
+- Provide location-based features and services
 
 ### Account Management
-
-- Create and manage user accounts
-- Manage family groups (create, join, leave)
-- Maintain authentication state
-- Allow profile editing
+- Create and manage your user account
+- Manage family group memberships
+- Provide profile editing capabilities
 
 ### Service Improvement
+- Improve app functionality and user experience
+- Fix bugs and technical issues (via crash reports)
+- Ensure app security and stability
+- Analyze app usage patterns (via analytics)
+- Optimize app performance
 
-- Improve app functionality and reliability
-- Fix bugs and technical issues
-- Ensure security and stability
-- Provide diagnostic information in Location Settings
+### Emergency Features
+- Send emergency alerts with your location to family members
+- Store emergency alert data temporarily for family members to view
 
-MyFamilyTracker does **not** display ads and does **not** sell, rent, or monetize user data.
+## Data Storage and Security
 
-## Storage and Retention
+### Storage
+- **Real-time Location**: Current location data is stored in Firebase Realtime Database (for all users)
+- **Location History**:
+  - **Pro Users**: Stored in Firebase Realtime Database (cloud storage)
+  - **Free Users**: Stored locally on your device using Room database (encrypted local storage)
+- **User Profiles**: Stored in Firebase Realtime Database
+- **Data Encryption**: 
+  - Cloud data: Encrypted in transit (HTTPS/TLS) and at rest (Firebase encryption)
+  - Local data: Encrypted using Android's built-in encryption for local databases
 
-### Data Storage
-
-- **Location data:** Stored in Firebase Realtime Database (Google Cloud infrastructure)
-- **User profiles:** Stored in Firebase Realtime Database
-- **Family group data:** Stored in Firebase Realtime Database
-- **App preferences:** Stored locally on your device
+### Security
+- We use industry-standard security measures
+- Firebase provides secure data storage
+- Access to data is restricted to authenticated users
 
 ### Data Retention
-
-- Location data is updated in real time and previous locations are replaced
-- Data is retained only while you actively use the app
-- You may request account and data deletion at any time
-
-### Data Security
-
-- Data encrypted in transit using HTTPS/TLS
-- Data encrypted at rest in Firebase
-- Access restricted to authenticated users
-- Firebase provides industry-standard security protections
+- **Real-time Location**: Current location is stored in real-time in Firebase Realtime Database
+- **Location History**:
+  - **Pro Users**: Stored in Firebase Realtime Database, keeps the last 100 entries per user
+  - **Free Users**: Stored locally on your device, automatically deleted after 30 days
+- **User Profile**: Stored in Firebase Realtime Database until you delete your account
+- **Privacy Settings**: Stored in Firebase Realtime Database until you delete your account
+- **Geofences**: Stored in Firebase Realtime Database until you delete them or your account
+- **Emergency Alerts**: Stored temporarily in Firebase Realtime Database until marked inactive
+- **Local Storage**: Free users' location history stored locally is automatically cleaned up after 30 days
+- **Analytics Data**: Aggregated analytics data is retained by Firebase (see Firebase Privacy Policy)
+- **Crash Reports**: Retained by Firebase Crashlytics for analysis
+- **Account Deletion**: You can delete your account and all associated data at any time (both cloud and local data)
 
 ## Data Sharing
 
 ### Family Groups
-
-- Location is shared **only** with members of your family group
-- You control who can view your location
-- Leaving a family group immediately stops location sharing
+- Your location is shared only with members of your family group
+- Family group members can see your location in real-time
+- You can leave a family group at any time
 
 ### Third Parties
-
-The app uses trusted third-party services:
-
-- **Firebase (Google)** for authentication and database
-- **Google Maps** for map display
-- **Google Location Services** for location tracking
-
-Relevant policies:
-- https://policies.google.com/privacy
-- https://firebase.google.com/support/privacy
-
-We do **not** share data with:
-- Advertising networks
-- Data brokers
-- Unauthorized third parties
-
-## Permissions Used
-
-### Required Permissions
-
-- **ACCESS_FINE_LOCATION**  
-  Required for precise location tracking and sharing
-
-- **ACCESS_COARSE_LOCATION**  
-  Used when precise location is unavailable
-
-- **ACCESS_BACKGROUND_LOCATION**  
-  Required for continuous location sharing in the background
-
-- **FOREGROUND_SERVICE / FOREGROUND_SERVICE_LOCATION**  
-  Required to keep location tracking active
-
-- **POST_NOTIFICATIONS**  
-  Required to display an ongoing notification while location tracking is active
-
-- **INTERNET**  
-  Required to communicate with Firebase services
-
-- **ACCESS_NETWORK_STATE**  
-  Used to detect network availability
-
-### Optional Permissions
-
-- None. All listed permissions are required for core functionality.
+- **We do not sell your data to third parties**
+- **Firebase (Google)**: We use Firebase for:
+  - Authentication (Google Sign-In, Anonymous)
+  - Realtime Database (data storage)
+  - Cloud Messaging (push notifications)
+  - Analytics (app usage statistics)
+  - Crashlytics (crash reporting)
+- **Google Maps**: Used for map visualization and location services
+- **Data Processing**: Firebase and Google Maps process data on our behalf to provide services
+- See [Firebase Privacy Policy](https://firebase.google.com/support/privacy) and [Google Privacy Policy](https://policies.google.com/privacy) for their data practices
 
 ## Your Rights and Controls
 
-### Location Control
-
-- Enable or disable location sharing at any time
-- Leave family groups to stop sharing
-- Manage who can see your location
+### Location Sharing Control
+- **Enable/Disable**: You can enable/disable location sharing in app settings at any time
+- **Time Limits**: You can set location sharing to expire after a specific duration (1 hour to 30 days, or never)
+- **Privacy Controls**: Advanced privacy features allow you to:
+  - Hide your location from specific family members
+  - Use location fuzzing to show the approximate location instead of the exact
+  - Set time-based sharing schedules (only share during specific times)
+  - Enable invisible mode to hide your online status
+- **Family Group Control**: You control who can see your location (family group members only)
+- **Leave Groups**: You can leave family groups at any time, which stops sharing with that group
 
 ### Account Management
+- You can edit your profile information
+- You can leave family groups
+- You can delete your account (contact support)
 
-- Edit profile information
-- Leave or manage family groups
-- Request account deletion
-- Sign out at any time
+### Data Access
+- **Profile Data**: You can view and edit your profile data in the app (Settings → Profile)
+- **Location Data**: You can view your current location and location history in the app
+- **Privacy Settings**: You can view and modify your privacy settings (Settings → Privacy & Security)
+- **Data Export**: You can export your location history in CSV or JSON format (Settings → Location Settings → Location History → Export)
+- **Account Deletion**: You can request account deletion (contact support)
 
-### Permissions
+## Children's Privacy
 
-- Manage permissions via Android Settings
-- Disabling required permissions will stop app functionality
-
-## Children’s Privacy
-
-MyFamilyTracker is **not intended for children under 13**. We do not knowingly collect data from children. Parents or guardians who believe a child has provided personal information may contact us for deletion.
-
-## Security
-
-- HTTPS/TLS encryption for all network communication
-- Firebase encryption at rest
-- Secure authentication via Google Sign-In and Firebase
-- Location access restricted to family group members only
+- **Age Requirement**: Our app is not intended for children under 13 (or under 16 in the EU)
+- **No Child Data**: We do not knowingly collect data from children under 13
+- **Parental Consent**: If you are a parent or guardian and believe your child has provided us with personal information, be sure to get in touch with us immediately
+- **Account Deletion**: We will delete any child's data if we become aware that it has been collected
 
 ## Changes to This Policy
 
-This Privacy Policy may be updated to reflect feature changes or legal requirements. Updates will be reflected by a revised **Last updated** date. Continued use of the app constitutes acceptance of changes.
+- We may update this Privacy Policy from time to time
+- We will notify you of significant changes
+- Continued use of the app after changes constitutes acceptance
 
 ## Contact Us
 
-For questions, data deletion requests, or privacy concerns:
+If you have questions about this Privacy Policy, your data, or wish to exercise your rights:
 
-- **Website:** https://sudarshantechlabs.com
-- **Company email:** sudarshantechlabs@gmail.com
-- **Developer email:** sunny.sudarshan@gmail.com
-- **GitHub:** https://github.com/SUDARSHANCHAUDHARI/myfamilytracker-privacy-policy
-- **App repository:** https://github.com/SUDARSHANCHAUDHARI/MyFamilyTracker
+- **Email**: [Add your contact email here]
+- **GitHub Issues**: [Add your GitHub repository URL here]
+- **In-App Support**: Settings → Help & Support → Contact Support
 
-We typically respond within **48 hours**.
-
-## Data Deletion
-
-To request data deletion:
-
-1. Open the MyFamilyTracker app  
-2. Go to Settings → Profile  
-3. Contact support via email  
-4. Request account and data deletion  
-
-All associated data will be permanently removed, including:
-- User profile
-- Location data
-- Family group membership
+**Data Protection Inquiries**: For questions about data protection, data access, or account deletion, don't hesitate to get in touch with us using one of the methods above.
 
 ## Firebase and Google Services
 
-This app uses Firebase and Google services:
+This app uses Firebase and Google services. Please review:
+- [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
+- [Google Privacy Policy](https://policies.google.com/privacy)
+- [Google Maps Terms of Service](https://cloud.google.com/maps-platform/terms)
 
-- https://firebase.google.com/support/privacy
-- https://policies.google.com/privacy
-- https://cloud.google.com/maps-platform/terms
+## Data Deletion and Your Rights
+
+### Right to Deletion
+You have the right to request deletion of your account and all associated data:
+1. Open the app
+2. Go to Settings → About → Contact Support
+3. Request account deletion
+4. All your data will be permanently deleted within 30 days
+
+### What Gets Deleted
+When you delete your account, we will delete:
+- Your user profile (from Firebase)
+- All location data (current and history from Firebase)
+- All local location history (if you're a free user, local database entries are deleted)
+- All privacy settings
+- All geofences
+- All emergency alerts
+- Family group membership
+
+### What May Remain
+- Aggregated, anonymized analytics data (cannot be linked to you)
+- Crash reports (anonymized, no personal data)
+- Data required by law or for legitimate business purposes
+
+### GDPR Rights (EU Users)
+If you are in the European Union, you have additional rights:
+- **Right to Access**: Request a copy of your personal data
+- **Right to Rectification**: Correct inaccurate data
+- **Right to Erasure**: Request deletion of your data
+- **Right to Restrict Processing**: Limit how we use your data
+- **Right to Data Portability**: Receive your data in a portable format
+- **Right to Object**: Object to certain types of processing
+
+To exercise these rights, contact us using the methods above.
+
+## Permissions Explained
+
+### Location Permissions
+- **ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION**: Required to track and share your location
+- **ACCESS_BACKGROUND_LOCATION**: Required for continuous location tracking when the app is in the background
+- **Why**: Core functionality of the app requires location access
+
+### Notification Permission
+- **POST_NOTIFICATIONS** (Android 13+): Required to send push notifications
+- **Why**: To notify you of family member locations, geofence events, and emergency alerts
+
+### Network Permission
+- **INTERNET**: Required to connect to Firebase and Google Maps
+- **ACCESS_NETWORK_STATE**: Required to check network connectivity
+- **Why**: App requires an internet connection to function
+
+### Vibration Permission
+- **VIBRATE**: Used for haptic feedback in emergency alerts
+- **Why**: Provides tactile feedback for important alerts
+
+---
+
+## Security Measures
+
+- **Encryption**: All data is encrypted in transit (HTTPS/TLS) and at rest (Firebase encryption)
+- **Authentication**: Access to data requires Firebase Authentication
+- **Firebase Security Rules**: Database access is restricted based on authentication and ownership
+- **API Keys**: API keys are stored securely and not exposed in the app
+- **Regular Updates**: We regularly update the app to address security vulnerabilities
+
+---
+
+## Changes to This Policy
+
+- We may update this Privacy Policy from time to time
+- **Significant Changes**: We will notify you of significant changes via:
+  - In-app notification
+  - Email (if provided)
+  - App update release notes
+- **Continued Use**: Continued use of the app after changes constitutes acceptance
+- **Last Updated**: This policy was last updated on January 1, 2026
+
+---
+
+**Note:** This privacy policy is current as of version 2.0.3. Please review it periodically for updates.
+
+## Recent Updates (Version 2.0.3 - January 1, 2026)
+
+- **Local Storage for Free Users**: Free users' location history is now stored locally on their device using encrypted local storage (Room database) with 30-day automatic retention. This provides privacy and reduces cloud storage costs while still allowing free users to access their location history.
+- **Pro Users**: Pro users continue to have unlimited cloud storage in Firebase Realtime Database with the last 100 entries retained.
+
 
 ## About MyFamilyTracker
 
