@@ -1,16 +1,127 @@
 # MyFamilyTracker Privacy Policy
 
-**Last updated: January 1, 2026**
+**Effective Date:** February 15, 2026
+**Last Updated:** February 15, 2026
+**Version:** 2.1.0
 
-This Privacy Policy applies to the mobile application **MyFamilyTracker**, published by **Sudarshan Tech Labs**.
+## 📱 **Data Collection**
 
-**Official website:** https://sudarshantechlabs.com  
-**Company email:** sudarshantechlabs@gmail.com  
-**Developer contact:** sunny.sudarshan@gmail.com
+### Information We Collect:
+- **Location Data:** GPS coordinates for family tracking
+- **User Profile:** Name, email, photo
+- **Device Information:** Android version, device model
+- **Usage Analytics:** App usage patterns
 
-MyFamilyTracker ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.
+### How We Use Your Data:
+- **Family Tracking:** Real-time location sharing
+- **Emergency Alerts:** SOS notifications
+- **Service Improvement:** Performance optimization
+- **Support:** Customer service assistance
 
-## Information We Collect
+## 🔒 **Data Security**
+
+- **Encryption:** All data encrypted in transit
+- **Firebase Security:** Google's secure infrastructure
+- **Access Control:** Only family members can see location data
+- **Data Retention:** 30 days for free users, unlimited for pro users
+
+## 👥 **Data Sharing**
+
+We **DO NOT** sell or share your data with third parties for advertising.
+
+**We only share data with:**
+- **Family Members:** Location data within your family group
+- **Firebase (Google):** Secure backend infrastructure
+- **Emergency Services:** Only with explicit consent
+
+## 🗑️ **Account Deletion**
+
+### **How to Delete Your Account:**
+
+You have **multiple options** to delete your account and all associated data:
+
+#### **Option 1: In-App Deletion**
+1. Open MyFamilyTracker app
+2. Go to **Profile Settings**
+3. Select **"Delete Account"**
+4. Confirm deletion in the pop-up
+5. Your account and all data will be permanently deleted
+
+#### **Option 2: Email Deletion Request**
+Send an email to: **support@sudarshantechlabs.com**
+- Subject: "Account Deletion Request"
+- Include: Your registered email address
+- We'll process deletion within 48 hours
+
+#### **Option 3: Web Deletion**
+Visit: **https://sudarshanchaudhari.github.io/myfamilytracker-privacy-policy/**
+- Enter your email address
+- Click "Delete My Account"
+- Confirm via email link
+
+### **What Gets Deleted:**
+- ✅ All location history
+- ✅ User profile information
+- ✅ Family group memberships
+- ✅ Geofence data
+- ✅ Chat messages
+- ✅ All app data
+
+### **Data Retention:**
+- **Immediate:** Account becomes inaccessible
+- **30 days:** Data completely removed from servers
+- **Backup:** No backups retained after deletion
+
+## �‍👩‍👧‍👦 **Child Safety**
+
+**Age Requirement:**
+- **Minimum Age:** 13+ years old
+- **Parental Consent:** Required for users under 18
+- **Age Verification:** Users confirm age during signup
+
+**For Minors (Under 18):**
+- ✅ **Parental Control:** Parents can monitor location
+- ✅ **Privacy Controls:** Limited sharing options
+- ✅ **Emergency Only:** SOS features available
+- ❌ **No Tracking Without Consent**
+
+**Parental Features:**
+- 📱 **Parent Dashboard:** Monitor child's location
+- 🔒 **Privacy Settings:** Control data sharing
+- 🚨 **Emergency Alerts:** Immediate notifications
+- ⏰ **Time Limits:** Set usage restrictions
+
+## �📞 **Contact Us**
+
+**For privacy questions or account deletion:**
+- **Email:** support@sudarshantechlabs.com
+- **Website:** https://sudarshantechlabs.com
+- **Response Time:** Within 24-48 hours
+
+## 🔧 **Your Rights**
+
+Under GDPR and data protection laws, you have the right to:
+- ✅ **Access** your personal data
+- ✅ **Correct** inaccurate information
+- ✅ **Delete** your account and data
+- ✅ **Export** your data
+- ✅ **Object** to data processing
+
+## 📜 **Policy Updates**
+
+We'll notify you of any significant changes to this privacy policy via:
+- In-app notification
+- Email notification
+- Updated policy date
+
+---
+
+**This privacy policy is legally binding and complies with:**
+- GDPR (General Data Protection Regulation)
+- CCPA (California Consumer Privacy Act)
+- Google Play Store Requirements
+
+**Last reviewed:** February 15, 2026
 
 ### Location Data
 - **Real-time Location**: We collect your device's location data (latitude, longitude) to share with family members in your family group
@@ -28,7 +139,7 @@ MyFamilyTracker ("we", "our", or "us") is committed to protecting your privacy. 
 - **Privacy Settings**: Your privacy preferences including:
   - Invisible mode status
   - Location fuzzing preferences
-  - Members to hide the location from
+  - Members to hide location from
   - Time-based sharing schedules
 
 ### Device Information
@@ -125,7 +236,7 @@ MyFamilyTracker ("we", "our", or "us") is committed to protecting your privacy. 
 - **Time Limits**: You can set location sharing to expire after a specific duration (1 hour to 30 days, or never)
 - **Privacy Controls**: Advanced privacy features allow you to:
   - Hide your location from specific family members
-  - Use location fuzzing to show the approximate location instead of the exact
+  - Use location fuzzing to show approximate location instead of exact
   - Set time-based sharing schedules (only share during specific times)
   - Enable invisible mode to hide your online status
 - **Family Group Control**: You control who can see your location (family group members only)
@@ -147,7 +258,7 @@ MyFamilyTracker ("we", "our", or "us") is committed to protecting your privacy. 
 
 - **Age Requirement**: Our app is not intended for children under 13 (or under 16 in the EU)
 - **No Child Data**: We do not knowingly collect data from children under 13
-- **Parental Consent**: If you are a parent or guardian and believe your child has provided us with personal information, be sure to get in touch with us immediately
+- **Parental Consent**: If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately
 - **Account Deletion**: We will delete any child's data if we become aware that it has been collected
 
 ## Changes to This Policy
@@ -164,7 +275,7 @@ If you have questions about this Privacy Policy, your data, or wish to exercise 
 - **GitHub Issues**: [Add your GitHub repository URL here]
 - **In-App Support**: Settings → Help & Support → Contact Support
 
-**Data Protection Inquiries**: For questions about data protection, data access, or account deletion, don't hesitate to get in touch with us using one of the methods above.
+**Data Protection Inquiries**: For questions about data protection, data access, or account deletion, please contact us using one of the methods above.
 
 ## Firebase and Google Services
 
@@ -212,7 +323,7 @@ To exercise these rights, contact us using the methods above.
 
 ### Location Permissions
 - **ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION**: Required to track and share your location
-- **ACCESS_BACKGROUND_LOCATION**: Required for continuous location tracking when the app is in the background
+- **ACCESS_BACKGROUND_LOCATION**: Required for continuous location tracking when app is in background
 - **Why**: Core functionality of the app requires location access
 
 ### Notification Permission
@@ -222,7 +333,7 @@ To exercise these rights, contact us using the methods above.
 ### Network Permission
 - **INTERNET**: Required to connect to Firebase and Google Maps
 - **ACCESS_NETWORK_STATE**: Required to check network connectivity
-- **Why**: App requires an internet connection to function
+- **Why**: App requires internet connection to function
 
 ### Vibration Permission
 - **VIBRATE**: Used for haptic feedback in emergency alerts
@@ -259,19 +370,3 @@ To exercise these rights, contact us using the methods above.
 - **Local Storage for Free Users**: Free users' location history is now stored locally on their device using encrypted local storage (Room database) with 30-day automatic retention. This provides privacy and reduces cloud storage costs while still allowing free users to access their location history.
 - **Pro Users**: Pro users continue to have unlimited cloud storage in Firebase Realtime Database with the last 100 entries retained.
 
-
-## About MyFamilyTracker
-
-MyFamilyTracker is a professional Android application built with:
-- Kotlin
-- Firebase backend services
-- Google Maps
-- Google Location Services
-
-The app is designed with privacy in mind. You control who sees your location, and data is shared only with family members you explicitly join.
-
----
-
-## Repository Purpose
-
-This repository hosts the official privacy policy for the MyFamilyTracker Android application and is intended for public access and Google Play Store linking.
