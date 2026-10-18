@@ -90,6 +90,7 @@ MyFamilyTracker shows optional rewarded video ads from Google AdMob when you cho
 - We use **Google Location Services** for location tracking.
 - See [Google's Privacy Policy](https://policies.google.com/privacy) for their data practices.
 - See [Firebase Privacy Policy](https://firebase.google.com/support/privacy) for Firebase data practices.
+- We use **Firebase Crashlytics** (Google) to collect crash reports. When the app crashes, Crashlytics may collect the crash details, your device model, Android OS version, app version, and a Crashlytics installation ID. We use this only to find and fix bugs.
 - We use **Google AdMob** to show optional rewarded ads. The AdMob SDK may collect your device's advertising ID and other device identifiers, IP address, device and app information, and how you interact with ads. Google uses this to deliver and measure ads, limit how often you see them, and prevent fraud.
 - You can reset or delete your advertising ID in your device's Google settings.
 - See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) for AdMob data practices.
@@ -111,6 +112,7 @@ We do **not** share your data with:
 * **POST_NOTIFICATIONS** (Android 13+): Required to show a persistent notification indicating that the location service is active. This notification cannot be dismissed while the service is running, as required by Android for foreground services.
 * **INTERNET**: Required to communicate with Firebase servers for authentication, data storage, and location sharing.
 * **ACCESS_NETWORK_STATE**: Used to check network connectivity status.
+* **VIBRATE**: Used for haptic feedback.
 
 ### Optional Permissions
 
@@ -264,6 +266,7 @@ The app is designed with privacy in mind - you control who can see your location
 ## Recent Updates (Version 2.2.0 - October 19, 2026)
 
 - **Advertising Disclosure**: Disclosed the optional Google AdMob rewarded ads and the data the AdMob SDK may collect
+- **Crash Reporting Disclosure**: Disclosed Firebase Crashlytics crash reports and listed the VIBRATE permission
 
 ## Recent Updates (Version 2.1.0 - February 15, 2026)
 
