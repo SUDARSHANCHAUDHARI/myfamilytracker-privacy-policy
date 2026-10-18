@@ -23,8 +23,8 @@
     <article>
       <h1>MyFamilyTracker Privacy Policy</h1>
       <p><strong>Effective Date:</strong> February 15, 2026</p>
-      <p><em>Last updated: February 15, 2026</em></p>
-      <p><strong>Version:</strong> 2.1.0</p>
+      <p><em>Last updated: October 19, 2026</em></p>
+      <p><strong>Version:</strong> 2.2.0</p>
       <p>MyFamilyTracker (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is a family location tracking and sharing app for Android devices. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using MyFamilyTracker you agree to the practices described below.</p>
       <h2>Information We Collect</h2>
       <h3>Location Data</h3>
@@ -70,7 +70,7 @@
       <li>Ensure app security and stability.</li>
       <li>Provide diagnostic information in Location Settings.</li>
       </ul>
-      <p>We do not run ads and do not sell, rent, or monetize your data to third parties.</p>
+      <p>MyFamilyTracker shows optional rewarded video ads from Google AdMob when you choose to watch an ad to unlock a feature. We do not sell, rent, or monetize your data to third parties.</p>
       <h2>Storage and Retention</h2>
       <h3>Data Storage</h3>
       <ul>
@@ -112,10 +112,14 @@
       <li>We use <strong>Google Location Services</strong> for location tracking.</li>
       <li>See <a href="https://policies.google.com/privacy">Google&#39;s Privacy Policy</a> for their data practices.</li>
       <li>See <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a> for Firebase data practices.</li>
+      <li>We use <strong>Firebase Crashlytics</strong> (Google) to collect crash reports. When the app crashes, Crashlytics may collect the crash details, your device model, Android OS version, app version, and a Crashlytics installation ID. We use this only to find and fix bugs.</li>
+      <li>We use <strong>Google AdMob</strong> to show optional rewarded ads. The AdMob SDK may collect your device&#39;s advertising ID and other device identifiers, IP address, device and app information, and how you interact with ads. Google uses this to deliver and measure ads, limit how often you see them, and prevent fraud.</li>
+      <li>You can reset or delete your advertising ID in your device&#39;s Google settings.</li>
+      <li>See <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> for AdMob data practices.</li>
       </ul>
       <p>We do <strong>not</strong> share your data with:</p>
       <ul>
-      <li>Advertising networks</li>
+      <li>Advertising networks other than Google AdMob (we do not pass your location, profile, or family group data to AdMob)</li>
       <li>Data brokers</li>
       <li>Analytics services (beyond Firebase Analytics)</li>
       <li>Other third-party services</li>
@@ -123,13 +127,14 @@
       <h2>Permissions Used</h2>
       <h3>Required Permissions</h3>
       <ul>
-      <li><strong>ACCESS<em>FINE</em>LOCATION</strong> (Precise location): Essential for the app&#39;s core functionality. Allows MyFamilyTracker to track and share your location with family members. Without this permission, the app cannot function.</li>
-      <li><strong>ACCESS<em>COARSE</em>LOCATION</strong> (Approximate location): Used as a fallback when precise location is not available.</li>
-      <li><strong>ACCESS<em>BACKGROUND</em>LOCATION</strong> (Android 10+): Required to track your location in the background while the app is not in the foreground. This ensures continuous location sharing with family members.</li>
-      <li><strong>FOREGROUND<em>SERVICE</strong> and <strong>FOREGROUND</em>SERVICE_LOCATION</strong>: Required to maintain the location tracking service running in the background. This ensures location updates continue even when the app is in the background.</li>
+      <li><strong>ACCESS_FINE_LOCATION</strong> (Precise location): Essential for the app&#39;s core functionality. Allows MyFamilyTracker to track and share your location with family members. Without this permission, the app cannot function.</li>
+      <li><strong>ACCESS_COARSE_LOCATION</strong> (Approximate location): Used as a fallback when precise location is not available.</li>
+      <li><strong>ACCESS_BACKGROUND_LOCATION</strong> (Android 10+): Required to track your location in the background while the app is not in the foreground. This ensures continuous location sharing with family members.</li>
+      <li><strong>FOREGROUND_SERVICE</strong> and <strong>FOREGROUND_SERVICE_LOCATION</strong>: Required to maintain the location tracking service running in the background. This ensures location updates continue even when the app is in the background.</li>
       <li><strong>POST_NOTIFICATIONS</strong> (Android 13+): Required to show a persistent notification indicating that the location service is active. This notification cannot be dismissed while the service is running, as required by Android for foreground services.</li>
       <li><strong>INTERNET</strong>: Required to communicate with Firebase servers for authentication, data storage, and location sharing.</li>
-      <li><strong>ACCESS<em>NETWORK</em>STATE</strong>: Used to check network connectivity status.</li>
+      <li><strong>ACCESS_NETWORK_STATE</strong>: Used to check network connectivity status.</li>
+      <li><strong>VIBRATE</strong>: Used for haptic feedback.</li>
       </ul>
       <h3>Optional Permissions</h3>
       <ul>
@@ -263,6 +268,7 @@
       <li><a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a></li>
       <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
       <li><a href="https://cloud.google.com/maps-platform/terms">Google Maps Terms of Service</a></li>
+      <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a></li>
       </ul>
       <h2>About MyFamilyTracker</h2>
       <p>MyFamilyTracker is a professional Android application for real-time family location tracking and sharing. The app is built with:</p>
@@ -271,11 +277,17 @@
       <li>Firebase for backend services</li>
       <li>Google Maps for map visualization</li>
       <li>Google Location Services for location tracking</li>
+      <li>Google AdMob for optional rewarded ads</li>
       </ul>
       <p>The app is designed with privacy in mind - you control who can see your location, and location data is only shared with family group members you explicitly join.</p>
       <hr>
-      <p><strong>Last Updated:</strong> February 15, 2026</p>
+      <p><strong>Last Updated:</strong> October 19, 2026</p>
       <hr>
+      <h2>Recent Updates (Version 2.2.0 - October 19, 2026)</h2>
+      <ul>
+      <li><strong>Advertising Disclosure</strong>: Disclosed the optional Google AdMob rewarded ads and the data the AdMob SDK may collect</li>
+      <li><strong>Crash Reporting Disclosure</strong>: Disclosed Firebase Crashlytics crash reports and listed the VIBRATE permission</li>
+      </ul>
       <h2>Recent Updates (Version 2.1.0 - February 15, 2026)</h2>
       <ul>
       <li><strong>Enhanced Account Deletion</strong>: Added multiple deletion methods (in-app, email, web)</li>

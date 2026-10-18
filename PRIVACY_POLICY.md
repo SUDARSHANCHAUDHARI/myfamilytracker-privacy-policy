@@ -1,8 +1,8 @@
 # MyFamilyTracker Privacy Policy
 
 **Effective Date:** February 15, 2026
-_Last updated: February 15, 2026_
-**Version:** 2.1.0
+_Last updated: October 19, 2026_
+**Version:** 2.2.0
 
 MyFamilyTracker ("we," "our," or "us") is a family location tracking and sharing app for Android devices. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using MyFamilyTracker you agree to the practices described below.
 
@@ -44,7 +44,7 @@ MyFamilyTracker ("we," "our," or "us") is a family location tracking and sharing
 - Ensure app security and stability.
 - Provide diagnostic information in Location Settings.
 
-We do not run ads and do not sell, rent, or monetize your data to third parties.
+MyFamilyTracker shows optional rewarded video ads from Google AdMob when you choose to watch an ad to unlock a feature. We do not sell, rent, or monetize your data to third parties.
 
 ## Storage and Retention
 
@@ -82,9 +82,13 @@ We do not run ads and do not sell, rent, or monetize your data to third parties.
 - We use **Google Location Services** for location tracking.
 - See [Google's Privacy Policy](https://policies.google.com/privacy) for their data practices.
 - See [Firebase Privacy Policy](https://firebase.google.com/support/privacy) for Firebase data practices.
+- We use **Firebase Crashlytics** (Google) to collect crash reports. When the app crashes, Crashlytics may collect the crash details, your device model, Android OS version, app version, and a Crashlytics installation ID. We use this only to find and fix bugs.
+- We use **Google AdMob** to show optional rewarded ads. The AdMob SDK may collect your device's advertising ID and other device identifiers, IP address, device and app information, and how you interact with ads. Google uses this to deliver and measure ads, limit how often you see them, and prevent fraud.
+- You can reset or delete your advertising ID in your device's Google settings.
+- See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) for AdMob data practices.
 
 We do **not** share your data with:
-- Advertising networks
+- Advertising networks other than Google AdMob (we do not pass your location, profile, or family group data to AdMob)
 - Data brokers
 - Analytics services (beyond Firebase Analytics)
 - Other third-party services
@@ -100,6 +104,7 @@ We do **not** share your data with:
 * **POST_NOTIFICATIONS** (Android 13+): Required to show a persistent notification indicating that the location service is active. This notification cannot be dismissed while the service is running, as required by Android for foreground services.
 * **INTERNET**: Required to communicate with Firebase servers for authentication, data storage, and location sharing.
 * **ACCESS_NETWORK_STATE**: Used to check network connectivity status.
+* **VIBRATE**: Used for haptic feedback.
 
 ### Optional Permissions
 
@@ -231,6 +236,7 @@ This app uses Firebase and Google services. Please review their privacy policies
 - [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
 - [Google Privacy Policy](https://policies.google.com/privacy)
 - [Google Maps Terms of Service](https://cloud.google.com/maps-platform/terms)
+- [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites)
 
 ## About MyFamilyTracker
 
@@ -239,14 +245,20 @@ MyFamilyTracker is a professional Android application for real-time family locat
 - Firebase for backend services
 - Google Maps for map visualization
 - Google Location Services for location tracking
+- Google AdMob for optional rewarded ads
 
 The app is designed with privacy in mind - you control who can see your location, and location data is only shared with family group members you explicitly join.
 
 ---
 
-**Last Updated:** February 15, 2026
+**Last Updated:** October 19, 2026
 
 ---
+
+## Recent Updates (Version 2.2.0 - October 19, 2026)
+
+- **Advertising Disclosure**: Disclosed the optional Google AdMob rewarded ads and the data the AdMob SDK may collect
+- **Crash Reporting Disclosure**: Disclosed Firebase Crashlytics crash reports and listed the VIBRATE permission
 
 ## Recent Updates (Version 2.1.0 - February 15, 2026)
 
