@@ -21,6 +21,13 @@ MyFamilyTracker ("we," "our," or "us") is a family location tracking and sharing
 - **Authentication**: User ID from Firebase Authentication. You can sign in with Google, with your phone number, or anonymously. **If you sign in with your phone number, that number is sent to Firebase Authentication and Google sends you a verification SMS** — in that case the number is an account identifier, not optional profile data.
 - **Family Group**: Family group membership, invite codes, and family group participation.
 
+### Messages You Send
+
+- The app includes a **chat feature for family group members**, available on Pro accounts. When you send a message, the app stores **the text of that message, your display name, your user ID and the group it was sent to** in Firebase Realtime Database.
+- Your messages are readable by the members of the family group you sent them to.
+- **Messages are not deleted when you delete your account.** A group conversation belongs to the whole group, and removing one person's messages from it is not something the app does today. If you want your messages removed, email us and we will do it by hand. The app's data export also does not currently include your messages.
+- We do not read your messages except where we have to in order to operate or repair the service, and we do not use them for advertising or analytics.
+
 ### Device Information
 - **Device ID**: Unique device identifier for location tracking and app functionality.
 - **App Usage**: Basic app usage data for functionality (family group membership, location sharing preferences).
@@ -61,6 +68,7 @@ MyFamilyTracker shows optional rewarded video ads from Google AdMob when you cho
 - **Location History Retention**:
   - **Pro Users**: Last 100 entries retained in Firebase Realtime Database
   - **Free Users**: 30 days retention in local encrypted storage (Room database)
+- **Chat messages are kept indefinitely** in the family group's conversation, including after the sender deletes their account. Email us to have yours removed.
 - You can delete your account and data at any time (contact support).
 
 ### Data Security
@@ -77,6 +85,7 @@ MyFamilyTracker shows optional rewarded video ads from Google AdMob when you cho
 - Family group members can see your location in real-time on the map.
 - You can leave a family group at any time, which stops sharing your location with that group.
 - You control who can see your location by managing family group membership.
+- **Messages you send in the family chat are shared with the members of that group.** Leaving the group stops your location sharing, but it does not remove messages you already sent.
 
 ### Third Parties
 - We use **Firebase** (Google) for backend services (authentication, database, cloud messaging).
@@ -234,6 +243,9 @@ There is no deletion form on this page. This page is a static document with no s
 - ✅ Notification preferences, privacy settings, sharing schedule, movement statistics and battery status
 - ✅ The sign-in record holding your identifier — today by email request, see Option 1
 
+### What Does Not Get Deleted:
+- ❌ **Messages you sent in the family chat.** They stay in the group's conversation. Email us if you want them removed.
+
 ### Data Retention After Deletion:
 - **Immediate:** Account becomes inaccessible
 - **30 days:** Data completely removed from servers
@@ -279,6 +291,7 @@ The app is designed with privacy in mind - you control who can see your location
 
 ## Recent Updates (Version 2.3.0 - November 9, 2026)
 
+- **Disclosed the family chat feature, which this policy had never mentioned at all.** The app stores the text of each message, your display name, your user ID and the group it went to in Firebase. Also stated the two things a reader most needs to know and were not written down anywhere: your messages are readable by the group, and **they are not deleted when you delete your account**, because the conversation belongs to the whole group. Email us to have yours removed. The data export does not include them either.
 - **Disclosed Sentry.** The app sends crash reports, performance traces for about one session in ten, and breadcrumbs naming the controls you tapped to Sentry, which is **not a Google service** and receives them at a United States endpoint. This had never been disclosed, and the previous wording of this section denied using "Analytics services (beyond Firebase Analytics)" and "Other third-party services" — both of which were untrue while Sentry was in the app. That denial is replaced with a list of every processor and the statement that there are no others.
 - **Said that the screen layout can go to Sentry too**, which on this app's screens can include member names and place labels, and that this is switched off from app version 2.2.2 onward. It is on in 2.2.1 and earlier.
 - **Disclosed the Google Maps Static API.** When a notification shows a small map image, the latitude and longitude being shown are sent to `maps.googleapis.com` to generate it. The policy previously said only that we "use Google Maps for map visualization", which reads as the on-device map.

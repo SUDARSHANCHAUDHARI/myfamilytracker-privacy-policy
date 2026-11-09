@@ -45,6 +45,13 @@
       <li><strong>Authentication</strong>: User ID from Firebase Authentication. You can sign in with Google, with your phone number, or anonymously. <strong>If you sign in with your phone number, that number is sent to Firebase Authentication and Google sends you a verification SMS</strong> — in that case the number is an account identifier, not optional profile data.</li>
       <li><strong>Family Group</strong>: Family group membership, invite codes, and family group participation.</li>
       </ul>
+      <h3>Messages You Send</h3>
+      <ul>
+      <li>The app includes a <strong>chat feature for family group members</strong>, available on Pro accounts. When you send a message, the app stores <strong>the text of that message, your display name, your user ID and the group it was sent to</strong> in Firebase Realtime Database.</li>
+      <li>Your messages are readable by the members of the family group you sent them to.</li>
+      <li><strong>Messages are not deleted when you delete your account.</strong> A group conversation belongs to the whole group, and removing one person's messages from it is not something the app does today. If you want your messages removed, email us and we will do it by hand. The app's data export also does not currently include your messages.</li>
+      <li>We do not read your messages except where we have to in order to operate or repair the service, and we do not use them for advertising or analytics.</li>
+      </ul>
       <h3>Device Information</h3>
       <ul>
       <li><strong>Device ID</strong>: Unique device identifier for location tracking and app functionality.</li>
@@ -88,6 +95,7 @@
       <li><strong>Location History Retention</strong>:</li>
       <li><strong>Pro Users</strong>: Last 100 entries retained in Firebase Realtime Database</li>
       <li><strong>Free Users</strong>: 30 days retention in local encrypted storage (Room database)</li>
+      <li><strong>Chat messages are kept indefinitely</strong> in the family group's conversation, including after the sender deletes their account. Email us to have yours removed.</li>
       <li>You can delete your account and data at any time (contact support).</li>
       </ul>
       <h3>Data Security</h3>
@@ -105,6 +113,7 @@
       <li>Family group members can see your location in real-time on the map.</li>
       <li>You can leave a family group at any time, which stops sharing your location with that group.</li>
       <li>You control who can see your location by managing family group membership.</li>
+      <li><strong>Messages you send in the family chat are shared with the members of that group.</strong> Leaving the group stops your location sharing, but it does not remove messages you already sent.</li>
       </ul>
       <h3>Third Parties</h3>
       <ul>
@@ -254,6 +263,10 @@
       <li>✅ Notification preferences, privacy settings, sharing schedule, movement statistics and battery status</li>
       <li>✅ The sign-in record holding your identifier — today by email request, see Option 1</li>
       </ul>
+      <h3>What Does Not Get Deleted:</h3>
+      <ul>
+      <li>❌ <strong>Messages you sent in the family chat.</strong> They stay in the group's conversation. Email us if you want them removed.</li>
+      </ul>
       <h3>Data Retention After Deletion:</h3>
       <ul>
       <li><strong>Immediate:</strong> Account becomes inaccessible</li>
@@ -291,6 +304,7 @@
       <hr>
       <h2>Recent Updates (Version 2.3.0 - November 9, 2026)</h2>
       <ul>
+      <li><strong>Disclosed the family chat feature, which this policy had never mentioned at all.</strong> The app stores the text of each message, your display name, your user ID and the group it went to in Firebase. Also stated the two things a reader most needs to know and were not written down anywhere: your messages are readable by the group, and <strong>they are not deleted when you delete your account</strong>, because the conversation belongs to the whole group. Email us to have yours removed. The data export does not include them either.</li>
       <li><strong>Disclosed Sentry.</strong> The app sends crash reports, performance traces for about one session in ten, and breadcrumbs naming the controls you tapped to Sentry, which is <strong>not a Google service</strong> and receives them at a United States endpoint. This had never been disclosed, and the previous wording of this section denied using "Analytics services (beyond Firebase Analytics)" and "Other third-party services" — both of which were untrue while Sentry was in the app. That denial is replaced with a list of every processor and the statement that there are no others.</li>
       <li><strong>Said that the screen layout can go to Sentry too</strong>, which on this app's screens can include member names and place labels, and that this is switched off from app version 2.2.2 onward. It is on in 2.2.1 and earlier.</li>
       <li><strong>Disclosed the Google Maps Static API.</strong> When a notification shows a small map image, the latitude and longitude being shown are sent to <code>maps.googleapis.com</code> to generate it. The policy previously said only that we "use Google Maps for map visualization", which reads as the on-device map.</li>
