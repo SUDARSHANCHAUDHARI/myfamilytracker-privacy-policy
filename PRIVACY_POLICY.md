@@ -1,8 +1,8 @@
 # MyFamilyTracker Privacy Policy
 
 **Effective Date:** February 15, 2026
-_Last updated: October 19, 2026_
-**Version:** 2.2.0
+_Last updated: November 9, 2026_
+**Version:** 2.3.0
 
 MyFamilyTracker ("we," "our," or "us") is a family location tracking and sharing app for Android devices. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using MyFamilyTracker you agree to the practices described below.
 
@@ -14,10 +14,11 @@ MyFamilyTracker ("we," "our," or "us") is a family location tracking and sharing
   - **Pro Users**: Location history is stored in Firebase Realtime Database (cloud storage, last 100 entries per user)
   - **Free Users**: Location history is stored locally on your device using Room database (30 days retention, automatically cleaned up)
 - **Location Accuracy**: We collect location accuracy information to provide better location services and display accuracy indicators.
+- **Location sent to the Google Maps Static API**: when the app shows a location or emergency notification with a small map image in it, the latitude and longitude being shown are sent to `maps.googleapis.com` so Google can generate that image. This is separate from the map inside the app, which is drawn on your device.
 
 ### Account Information
 - **User Profile**: Name, email address, and phone number (if provided during account creation or profile editing).
-- **Authentication**: User ID from Firebase Authentication (Google Sign-In or Anonymous Sign-In).
+- **Authentication**: User ID from Firebase Authentication. You can sign in with Google, with your phone number, or anonymously. **If you sign in with your phone number, that number is sent to Firebase Authentication and Google sends you a verification SMS** — in that case the number is an account identifier, not optional profile data.
 - **Family Group**: Family group membership, invite codes, and family group participation.
 
 ### Device Information
@@ -63,10 +64,11 @@ MyFamilyTracker shows optional rewarded video ads from Google AdMob when you cho
 - You can delete your account and data at any time (contact support).
 
 ### Data Security
-- Data is encrypted in transit using HTTPS/TLS.
+- Data is encrypted in transit using HTTPS/TLS, to every service named in this policy.
 - Data is encrypted at rest in Firebase Realtime Database.
 - Access to data is restricted to authenticated users.
 - Firebase provides industry-standard security measures.
+- Your location, profile and family group data are held by Google (Firebase). Crash and performance data also goes to Sentry, which is a separate company and a separate United States location — see Third Parties for exactly what it receives.
 
 ## Data Sharing
 
@@ -83,6 +85,11 @@ MyFamilyTracker shows optional rewarded video ads from Google AdMob when you cho
 - See [Google's Privacy Policy](https://policies.google.com/privacy) for their data practices.
 - See [Firebase Privacy Policy](https://firebase.google.com/support/privacy) for Firebase data practices.
 - We use **Firebase Crashlytics** (Google) to collect crash reports. When the app crashes, Crashlytics may collect the crash details, your device model, Android OS version, app version, and a Crashlytics installation ID. We use this only to find and fix bugs.
+- We use **Sentry** for crash and performance monitoring. **Sentry is not a Google service**, and this app sends to a United States endpoint (`ingest.us.sentry.io`). Sentry receives crash details and stack traces, performance traces for roughly one in ten app sessions, and breadcrumbs recording which buttons and controls you tapped before an error — those breadcrumbs name the control, so they can include the label shown on it. **Screenshots are switched off.** The app sets no identity for you in Sentry and sends it no location data, no family group data and no profile fields. We use it only to find and fix bugs and slow screens. See [Sentry's Privacy Policy](https://sentry.io/privacy/).
+- Sentry can also be sent the layout of the screen an error happened on, which on this app's screens can include member names and place labels shown in the layout. **This is switched off from app version 2.2.2 onward.** In version 2.2.1 and earlier it is switched on, so if you are running one of those versions it applies to you until you update.
+- We use the **Google Maps Static API** to draw the small map image inside a location or emergency notification. To do that, the app sends the latitude and longitude being shown to `maps.googleapis.com`. This is a Google web service and is separate from the map you see inside the app, which is drawn on your device.
+- We use **Firebase Cloud Functions** (Google) to run server-side code that sends notifications to your family members and validates purchases. Those functions read the data needed for the notification, and their diagnostic logs record account identifiers.
+- We use **Google Play Billing** for subscriptions and in-app purchases, including validating them and restoring them, and for the rewards in the referral programme. Google Play processes purchase status; we never receive or store your payment details.
 - We use **Google AdMob** to show optional rewarded ads. The AdMob SDK may collect your device's advertising ID and other device identifiers, IP address, device and app information, and how you interact with ads. Google uses this to deliver and measure ads, limit how often you see them, and prevent fraud.
 - You can reset or delete your advertising ID in your device's Google settings.
 - See [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) for AdMob data practices.
@@ -90,8 +97,9 @@ MyFamilyTracker shows optional rewarded video ads from Google AdMob when you cho
 We do **not** share your data with:
 - Advertising networks other than Google AdMob (we do not pass your location, profile, or family group data to AdMob)
 - Data brokers
-- Analytics services (beyond Firebase Analytics)
-- Other third-party services
+- Any service not named in this section
+
+Every processor this app sends data to is named above: Google (Firebase Authentication, Realtime Database, Cloud Messaging, Cloud Functions, Analytics, Crashlytics, Maps, Play Billing, AdMob) and Sentry. There are no others.
 
 ## Permissions Used
 
@@ -106,9 +114,19 @@ We do **not** share your data with:
 * **ACCESS_NETWORK_STATE**: Used to check network connectivity status.
 * **VIBRATE**: Used for haptic feedback.
 
+### Permissions added by Android libraries
+
+The app declares the nine above. The finished build carries six more, declared by the libraries it is built on rather than by the app's own code. They appear in the permission list you see on the Play Store, so they are listed here for completeness:
+
+* **ACCESS_ADSERVICES_AD_ID**, **ACCESS_ADSERVICES_ATTRIBUTION**, **ACCESS_ADSERVICES_TOPICS** and **com.google.android.gms.permission.AD_ID**: Android's Privacy Sandbox advertising APIs, declared by the Google AdMob and Firebase Analytics libraries. Unlike most of our apps, these are genuinely advertising-related here: MyFamilyTracker shows rewarded ads, described under Third Parties above. They let AdMob read your advertising ID, measure which ads led to an install or an action, and use Android's Topics API. You can reset or delete your advertising ID in your device's Google settings.
+* **WAKE_LOCK**: Declared by Firebase Cloud Messaging. Lets a push notification wake the device enough to be delivered.
+* **com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE**: Declared by the Google Play libraries. Lets Google Play tell the app which link or campaign the install came from.
+
+Verified against the merged manifest of the release build rather than the app's own manifest file.
+
 ### Optional Permissions
 
-* **None currently** - All permissions are required for core functionality.
+* **None currently** - All permissions the app declares are required for core functionality. The six library permissions above are not requested from you and cannot be revoked individually; they are granted at install time.
 
 ## Your Rights and Controls
 
@@ -191,7 +209,10 @@ You have **multiple options** to delete your account and all associated data:
 2. Go to **Profile Settings**
 3. Select **"Delete Account"**
 4. Confirm deletion in the pop-up
-5. Your account and all data will be permanently deleted
+
+This removes your location history, your profile, your family group membership, your geofences, your notification and privacy settings, your sharing schedule, your movement statistics and your battery status.
+
+**One thing it does not yet remove: the sign-in record itself**, which is the entry in Firebase Authentication holding the identifier you sign in with. Deleting your account from inside the app signs you out and leaves that record in place. An app update that removes it in the same step is in progress; until it ships, email us as in Option 2 and we will delete it. We would rather say this plainly than let you believe it is already gone.
 
 #### Option 2: Email Deletion Request
 Send an email to: **support@sudarshantechlabs.com**
@@ -199,18 +220,19 @@ Send an email to: **support@sudarshantechlabs.com**
 - Include: Your registered email address
 - We'll process deletion within 48 hours
 
-#### Option 3: Web Deletion
-Visit: **https://sudarshanchaudhari.github.io/myfamilytracker-privacy-policy/**
-- Enter your email address
-- Click "Delete My Account"
-- Confirm via email link
+#### Option 3: Clearing the App's Local Data
+- Android Settings > Apps > MyFamilyTracker > Storage > Clear Data, or uninstall the app
+- This removes the app's local copy on your device, including the locally stored location history that free accounts keep. It does not delete anything held in Firebase, so use Option 1 or Option 2 for that.
+
+There is no deletion form on this page. This page is a static document with no scripts and no forms; email is how a request reaches us.
 
 ### What Gets Deleted:
-- ✅ All location history
+- ✅ All location history, both the cloud copy and the copy on your device
 - ✅ User profile information
-- ✅ Family group memberships
+- ✅ Family group membership
 - ✅ Geofence data
-- ✅ All app data
+- ✅ Notification preferences, privacy settings, sharing schedule, movement statistics and battery status
+- ✅ The sign-in record holding your identifier — today by email request, see Option 1
 
 ### Data Retention After Deletion:
 - **Immediate:** Account becomes inaccessible
@@ -251,9 +273,19 @@ The app is designed with privacy in mind - you control who can see your location
 
 ---
 
-**Last Updated:** October 19, 2026
+**Last Updated:** November 9, 2026
 
 ---
+
+## Recent Updates (Version 2.3.0 - November 9, 2026)
+
+- **Disclosed Sentry.** The app sends crash reports, performance traces for about one session in ten, and breadcrumbs naming the controls you tapped to Sentry, which is **not a Google service** and receives them at a United States endpoint. This had never been disclosed, and the previous wording of this section denied using "Analytics services (beyond Firebase Analytics)" and "Other third-party services" — both of which were untrue while Sentry was in the app. That denial is replaced with a list of every processor and the statement that there are no others.
+- **Said that the screen layout can go to Sentry too**, which on this app's screens can include member names and place labels, and that this is switched off from app version 2.2.2 onward. It is on in 2.2.1 and earlier.
+- **Disclosed the Google Maps Static API.** When a notification shows a small map image, the latitude and longitude being shown are sent to `maps.googleapis.com` to generate it. The policy previously said only that we "use Google Maps for map visualization", which reads as the on-device map.
+- **Disclosed Firebase Cloud Functions and Google Play Billing**, neither of which was named, and the referral programme's rewards.
+- **Listed the six permissions Android libraries merge in.** The app declares nine; the finished build carries fifteen. Unlike our other apps the advertising ones are genuinely advertising-related here, since MyFamilyTracker shows rewarded ads, so they are explained rather than waved away.
+- **Said that phone sign-in sends your number to Firebase and triggers a verification SMS.** The policy named only Google and anonymous sign-in and treated a phone number as optional profile data.
+- **Corrected the account-deletion section.** Deleting your account in the app does not yet remove the sign-in record holding your identifier; it signs you out and leaves that record. The policy now says so and tells you to email us until the app update lands. Also removed "Option 3: Web Deletion", which gave step-by-step instructions — enter your email, click Delete My Account, confirm via email link — for a form that has never existed on this page. It is replaced with how to clear the app's local data, which is a real option and matters here because free accounts keep location history on the device.
 
 ## Recent Updates (Version 2.2.0 - October 19, 2026)
 
